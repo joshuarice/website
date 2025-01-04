@@ -15,7 +15,10 @@ type Project = {
 export default async function Projects() {
     const supabase = await createClient();
 
-    const { data: projects } = await supabase.from("projects").select("*");
+    const { data: projects } = await supabase
+        .from("projects")
+        .select("*")
+        .order("created_at", { ascending: true });
 
     return (
         <ul>
