@@ -32,8 +32,8 @@ export default async function Projects() {
 
 function Project({ project }: { project: Project }) {
     return (
-        <li className="flex gap-8 py-12 border-b-4 border-foreground/20 items-center">
-            <div className="w-2/3">
+        <li className="md:flex gap-8 py-12 border-b-4 border-foreground/20 items-center">
+            <div className="md:w-2/3 mb-8 md:mb-0">
                 <Image
                     src={project.image}
                     alt={`${project.name} project image`}
@@ -41,7 +41,7 @@ function Project({ project }: { project: Project }) {
                     height={600}
                 />
             </div>
-            <div className="w-1/2">
+            <div className="md:w-1/2">
                 <AkiraFont variant="superBold">
                     <h3 className="text-2xl font-bold mb-3 leading-none">
                         {project.name}
@@ -52,7 +52,7 @@ function Project({ project }: { project: Project }) {
                     <Link
                         href={project.url}
                         target="_blank"
-                        className="text-[#00d7ff]"
+                        className="text-personal"
                     >
                         View Website{" "}
                         <ArrowRightIcon className="inline-block relative -top-0.5 w-4 h-4" />
