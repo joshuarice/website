@@ -31,7 +31,7 @@ export default async function Home() {
                     </div>
                     <div>
                         <Link
-                            href=""
+                            href="mailto:me@joshuarice.net"
                             target="_blank"
                             className="bg-personal text-background px-4 py-2 rounded-md inline-block"
                         >
