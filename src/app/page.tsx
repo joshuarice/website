@@ -5,7 +5,7 @@ import Projects from "@/components/Projects";
 import Link from "next/link";
 import { ArrowRightIcon, ChevronsRightIcon } from "lucide-react";
 
-export default async function Home() {
+export default function Home() {
     return (
         <main>
             <MountainTop />

@@ -8,10 +8,10 @@ type Project = {
     name: string;
     description: string;
     image: string;
-    url: string | null;
+    url?: string;
 };
 
-const projects = [
+const projects: Project[] = [
     {
         id: "1",
         name: "Street League Spec Drone Racing",
@@ -65,11 +65,11 @@ const projects = [
     },
 ];
 
-export default async function Projects() {
+export default function Projects() {
     return (
         <ul>
             {projects ? (
-                projects?.map((project: any) => (
+                projects?.map((project) => (
                     <SingleProject key={project.id} project={project} />
                 ))
             ) : (
